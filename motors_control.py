@@ -1,3 +1,5 @@
+import time
+
 class RobotMotorsControl:
     def __init__(self):
         # Initialize motor speeds to zero
@@ -30,10 +32,19 @@ class RobotMotorsControl:
     def turn_right(self, speed):
         #Turn the robot right.
         self.set_motor_speed(speed, 0)
+    
+    def smooth_speed_transition(self, target_speed, duration):
+        # Change speed to the target speed over the given duration
+        # Some new code...
+
+    def listen_to_user_commands(self):
+        # Listen for user input and call the corresponding method
+        # Some new code...
 
 # Example usage
 robot = RobotMotorsControl()
 robot.forward(10)
 robot.turn_left(5)
 robot.stop_motors()
+robot.listen_to_user_commands()
 
